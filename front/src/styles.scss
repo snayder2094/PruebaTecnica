@@ -1,0 +1,38 @@
+@import '~bootstrap/scss/bootstrap';
+@import 'themes';
+@import '~@nebular/theme/styles/globals';
+@include nb-install() {
+    @include nb-theme-global();
+}
+
+::-webkit-scrollbar {
+    width: 0.4125rem;
+    height: 0.4125rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e4e9f2;
+    cursor: pointer;
+    border-radius: 0.15625rem;
+}
+
+::-webkit-scrollbar-track {
+    background: #f7f9fc;
+}
+
+
+/* You can add global styles to this file, and also import other style files */
+
+
+/* Importing Bootstrap SCSS file. */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+$form-select-bg: rgba(0, 0, 0, 0.4) !important;

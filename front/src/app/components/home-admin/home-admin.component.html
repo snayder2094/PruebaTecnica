@@ -1,0 +1,29 @@
+<nb-card [nbSpinner]="false">
+    <nb-card-header>
+        <nb-actions>
+            <nb-action icon="home-outline"></nb-action>
+            <nb-action icon="log-out-outline" (click)="logout()"></nb-action>
+        </nb-actions>
+    </nb-card-header>
+    <nb-card-body>
+        <header class="bg-custom text-center py-5 mb-4">
+            <div class="container">
+                <h1 class="font-weight-light text-primary"> {{ userName }}</h1>
+                <p class="lead text-primary">This list is from admin games</p>
+            </div>
+        </header>
+        <div class="container">
+            <div class="row">
+                <div *ngFor="let item of dataApi" class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-0 shadow">
+                        <img [src]="item.game.box.large" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-0">{{item.game.name}}</h5>
+                            <div class="card-text text-black-50">Viewers: {{item.viewers}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nb-card-body>
+</nb-card>

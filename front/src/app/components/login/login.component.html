@@ -1,0 +1,38 @@
+<div class="container h-100">
+    <div class="row">
+        <div class="col-lg-10 col-xl-9 mx-auto">
+            <div class="card card-signin flex-row my-5">
+                <div class="card-img-left d-none d-md-flex">
+
+                </div>
+                <div class="card-body">
+                    <div class="form-structor h-100">
+                        <form class="signup" [formGroup]="formSignin" (ngSubmit)="signUp(formSignin.valid)" [class]="isSignin">
+                            <h2 class="form-title" id="signup" (click)="isSignin = ''; isLogin = 'slide-up';"><span>or</span>Sign up</h2>
+                            <div class="form-holder">
+                                <input type="text" class="input" formControlName="Username" placeholder="Username" />
+                                <input type="password" class="input" formControlName="Password" placeholder="Password" />
+                                <select class="select" aria-label="Default select example" formControlName="Type">
+                                  <option selected>Select the type of user</option>
+                                  <option value="1">Admin</option>
+                                  <option value="2">User</option>
+                                </select>
+                            </div>
+                            <button class="submit-btn" type="submit">Sign up</button>
+                        </form>
+                        <form class="login" [formGroup]="formlogin" (ngSubmit)="login(formlogin.valid)" [class]="isLogin">
+                            <div class="center">
+                                <h2 class="form-title" id="login" (click)="isSignin = 'slide-up'; isLogin= '';"><span>or</span>Log in</h2>
+                                <div class="form-holder">
+                                    <input type="email" formControlName="Username" class="input" placeholder="Username" />
+                                    <input type="password" formControlName="Password" class="input" placeholder="Password" />
+                                </div>
+                                <button class="submit-btn" type="submit">Log in</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
